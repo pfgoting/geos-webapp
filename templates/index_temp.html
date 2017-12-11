@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tornado WebSockets</title>
+    <script>
+        var ws;
+
+        function init_ws() {
+            var url;
+            url = "ws://localhost:8080/websocket";
+            ws = new WebSocket( url );
+            ws.onopen  = function(event) {
+                console.log("Socket opened");
+                // init_chat_ui();
+            }
+ 
+            ws.onclose = function(){
+                console.log("WebSocket closed.");
+            }
+ 
+            ws.onerror  = function(event) {
+                console.log("ERROR opening WebSocket.");
+                $('body').html("<h1>ERROR connecting to chat server</h1><p>reload the page and try again</p>");
+            }
+ 
+            ws.onmessage = function(e){
+               var server_message = e.data;
+               alert(e.data)
+               console.log(server_message);
+            }
+
+            function sendMsg() {
+                ws.send(document.getElementById('msg').value);
+            }
+ 
+        };
+ 
+        function onLoad() {
+            ws = new WebSocket("ws://localhost:8080/websocket");
+ 
+            ws.onmessage = function() {
+               alert("New data");
+            };
+        }
+ 
+        function sendMsg() {
+            ws.send(document.getElementById('msg').value);
+        }
+    </script>
+</head>
+<body onload="init_ws();">
+    <strong>Message to Send:</strong>&nbsp;<input type="text" id="msg" maxlength="25" />
+    &nbsp;<input type="button" onclick="sendMsg();" value="Send" />
+</body>
+</html>

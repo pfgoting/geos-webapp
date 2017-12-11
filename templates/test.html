@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_7d1d040c73694a469368265a26778004 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_7d1d040c73694a469368265a26778004" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_7d1d040c73694a469368265a26778004 = L.map(
+                                  'map_7d1d040c73694a469368265a26778004',
+                                  {center: [14.676,121.0437],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_2f1940fcd78c44d6a5555900e25b9f8d = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_7d1d040c73694a469368265a26778004);
+        
+    
+
+            var marker_e2aa88a70a7d47cfa2b8991beea2daa5 = L.marker(
+                [14.646651,121.050082],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_7d1d040c73694a469368265a26778004);
+            
+    
+
+                var icon_50bbc963f1c5450eaada56463f6c596f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e2aa88a70a7d47cfa2b8991beea2daa5.setIcon(icon_50bbc963f1c5450eaada56463f6c596f);
+            
+    
+            var popup_ef6de82809b54d8480b98a10bb8b2e16 = L.popup({maxWidth: '300'});
+
+            
+                var html_6b1b5695326d462cb6944f481092ed7d = $('<div id="html_6b1b5695326d462cb6944f481092ed7d" style="width: 100.0%; height: 100.0%;"> 	            <h5> Quezon City Hall </h5> 	           </div>')[0];
+                popup_ef6de82809b54d8480b98a10bb8b2e16.setContent(html_6b1b5695326d462cb6944f481092ed7d);
+            
+
+            marker_e2aa88a70a7d47cfa2b8991beea2daa5.bindPopup(popup_ef6de82809b54d8480b98a10bb8b2e16);
+
+            
+        
+    
+
+            var marker_1d99a46583ae495fbf7b1a01256c4092 = L.marker(
+                [14.654318,121.032656],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_7d1d040c73694a469368265a26778004);
+            
+    
+
+                var icon_11f61dc3ddb6493d89ae29479828e92e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1d99a46583ae495fbf7b1a01256c4092.setIcon(icon_11f61dc3ddb6493d89ae29479828e92e);
+            
+    
+            var popup_6cf13617ff9a41a78f100e978101dec6 = L.popup({maxWidth: '300'});
+
+            
+                var html_45f8618cebbe43379132f812ea283898 = $('<div id="html_45f8618cebbe43379132f812ea283898" style="width: 100.0%; height: 100.0%;"> 	            <h5> Trinoma </h5> 	           </div>')[0];
+                popup_6cf13617ff9a41a78f100e978101dec6.setContent(html_45f8618cebbe43379132f812ea283898);
+            
+
+            marker_1d99a46583ae495fbf7b1a01256c4092.bindPopup(popup_6cf13617ff9a41a78f100e978101dec6);
+
+            
+        
+    
+
+            var marker_ec6c042c6c6c4b40a14149b8fff861db = L.marker(
+                [14.7361,121.063478],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_7d1d040c73694a469368265a26778004);
+            
+    
+
+                var icon_6fe4e849e3d04b3285f46996a985dc52 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ec6c042c6c6c4b40a14149b8fff861db.setIcon(icon_6fe4e849e3d04b3285f46996a985dc52);
+            
+    
+            var popup_cc4c8882013c4187bcd826396f45a6c6 = L.popup({maxWidth: '300'});
+
+            
+                var html_2b7586136f3a43598203cace08754a1e = $('<div id="html_2b7586136f3a43598203cace08754a1e" style="width: 100.0%; height: 100.0%;"> 	            <h5> Avida Astrea T1 </h5> 	           </div>')[0];
+                popup_cc4c8882013c4187bcd826396f45a6c6.setContent(html_2b7586136f3a43598203cace08754a1e);
+            
+
+            marker_ec6c042c6c6c4b40a14149b8fff861db.bindPopup(popup_cc4c8882013c4187bcd826396f45a6c6);
+
+            
+        
+    
+
+            var marker_81a1b367945d4c52995864fec880434d = L.marker(
+                [14.647696,121.036389],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_7d1d040c73694a469368265a26778004);
+            
+    
+
+                var icon_14084ff708224c53bf6ed10c7977e782 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_81a1b367945d4c52995864fec880434d.setIcon(icon_14084ff708224c53bf6ed10c7977e782);
+            
+    
+            var popup_2f112cdbb7684108a9ec09ab1df59571 = L.popup({maxWidth: '300'});
+
+            
+                var html_f6043e01f8b24172862c57090ec18711 = $('<div id="html_f6043e01f8b24172862c57090ec18711" style="width: 100.0%; height: 100.0%;"> 	            <h5> Vertis High Park </h5> 	           </div>')[0];
+                popup_2f112cdbb7684108a9ec09ab1df59571.setContent(html_f6043e01f8b24172862c57090ec18711);
+            
+
+            marker_81a1b367945d4c52995864fec880434d.bindPopup(popup_2f112cdbb7684108a9ec09ab1df59571);
+
+            
+        
+    
+
+            var marker_fe9435f77c824ef38b07ab5c71d3ea64 = L.marker(
+                [14.616245,121.054006],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_7d1d040c73694a469368265a26778004);
+            
+    
+
+                var icon_54ebfe472eaf4cd59ae57ff7c02c2332 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fe9435f77c824ef38b07ab5c71d3ea64.setIcon(icon_54ebfe472eaf4cd59ae57ff7c02c2332);
+            
+    
+            var popup_08dfa9bd9e4144dda3f2f392283d8f0e = L.popup({maxWidth: '300'});
+
+            
+                var html_9ac33b43c6c04e6d88a6f9c89bc2ff84 = $('<div id="html_9ac33b43c6c04e6d88a6f9c89bc2ff84" style="width: 100.0%; height: 100.0%;"> 	            <h5> Amaia Skies Cubao T1 </h5> 	           </div>')[0];
+                popup_08dfa9bd9e4144dda3f2f392283d8f0e.setContent(html_9ac33b43c6c04e6d88a6f9c89bc2ff84);
+            
+
+            marker_fe9435f77c824ef38b07ab5c71d3ea64.bindPopup(popup_08dfa9bd9e4144dda3f2f392283d8f0e);
+
+            
+        
+</script>
