@@ -1,9 +1,11 @@
 import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+from mapmaker import make_map
 
 
-class Watcher:
+
+class Watcher():
     DIRECTORY_TO_WATCH = "csv"
 
     def __init__(self):
@@ -33,12 +35,19 @@ class Handler(FileSystemEventHandler):
         elif event.event_type == 'created':
             # Take any action here when a file is first created.
             print "Received created event - %s." % event.src_path
+            # make_map()
 
         elif event.event_type == 'modified':
             # Taken any action here when a file is modified.
             print "Received modified event - %s." % event.src_path
+            make_map()
+
+def main():
+    print "Watching..."
+    w = Watcher()
+    w.run()
+
 
 
 if __name__ == '__main__':
-    w = Watcher()
-    w.run()
+    main()
