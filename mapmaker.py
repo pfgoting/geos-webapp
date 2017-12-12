@@ -34,7 +34,10 @@ def create_html(s,location):
     color = []
     for k in sorted(final.keys(),reverse=True):
         X.append(final[k]['val'])
-        color.append(final[k]['color'])
+        if final[k]['color'] is not None:
+                color.append(final[k]['color'])
+        else:
+            color.append('rgba(0,0,0,0)')
 
 
     # create the jinja env
