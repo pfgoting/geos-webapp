@@ -3,7 +3,7 @@ import tornado.websocket
 import tornado.httpserver
 import tornado.ioloop
 import os, time
-# from watcher import main
+from watcher import main
 from threading import Thread
 from mapmaker import make_map
  
@@ -79,6 +79,7 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r'/', IndexPageHandler),
+            (r"/static/images/(.*)", tornado.web.StaticFileHandler, {'path': "./static/images"}),
             (r'/(test\.html)', tornado.web.StaticFileHandler, dict(path='templates')),
             (r'/websocket', WebSocketHandler)
         ]
@@ -110,7 +111,9 @@ def monkey():
  
  
 if __name__ == '__main__':
-
+    t3 = Thread(target=main)
+    t3.daemon = True
+    t3.start()
 
     t2 = Thread(target=start_app)
     t2.daemon = True

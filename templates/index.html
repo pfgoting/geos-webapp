@@ -59,12 +59,12 @@
 
 .right{
     height:100%;
-    margin-left: 400px;
+    margin-left: 168px;
     /*background:red;*/
 }
 .left{
     float:left;
-    width:400px;
+    width:168px;
     overflow:hidden;
     /*background:green;*/
     height:100%;
@@ -92,17 +92,22 @@ button {
   width: 80px; // whatever your button's width
   margin: 0 auto; // auto left/right margins
 }
-
+img {
+    /*max-width: 100%;*/
+    max-height: 100%;
+}
 /*table { table-layout: fixed; }
 table th, table td { overflow: hidden; }
 }*/
 </style>
 
   <body onload="init_ws();">
-    <div class="left"></div>
+    <div class="left">
+      <img src="{{ static_url("images/sidebar.png") }}" width="168" />
+    </div>
   
     <div class="right">
-      <iframe src="test.html" id="mapframe"></iframe>
+      <iframe src="test.html" id="mapframe" frameborder="0"></iframe>
     </div>
 
   </body>

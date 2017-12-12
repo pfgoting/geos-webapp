@@ -1,4 +1,5 @@
-sensor,x,y,z,triggered
-1,0,0,0,f
-2,0,0,0,f
-3,0,0,0,f
+X,0.0
+Y,0.0
+Z,0.0
+sensor,1
+triggered,f
